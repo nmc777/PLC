@@ -26,6 +26,7 @@ Detect changes in capacitance wehn an object approaches the sensor. For plastic,
 Inductive Sensor
 Detect metal objects whent hey enter the field. Disrupts magnetic field.
 
+The machine will have Manual, Auto mode.
 There will be a emitter,
 It will spew Blue,Green,Metal, pieces. (plastic and metal)
 Upon infeed conveyor entry it will be scanned by a capactive and inductive sensor (will a vision sensor accomplish the same?)
@@ -33,4 +34,5 @@ to identify a count of the RAW parts produced via metal or plastic.
 There will be a lineup waiting at the infeed, so everytime a part is finally done in the machine cycle, the conveyor will move uo by 1. This means that the emitter must be in sequence so it doesnt overproduce parts during the wait.
 On the Machining Centre will be an HMI that displays total ASSEMBLED parts produced via metal and plastic, this may need a sensor at the output of the machining sensor to identify assembled parts. OR you can wait for completion bit to finish form machining centre and 
 apply count based on what was scanned by the infeed sensor.
-On outfeed, based on material it will be scaled, and then a sensor will trigger a pusher which will sepere material onto 2 conveyors, one for metal, one for plastic.
+On outfeed, it will be scaled,after the scaling cycle, it will move forward and then a sensor will detect if its a metal piece, if it is a pusher will slide it over to the next conveyor, if not. It enters the popup sorter and is sperated by color.
+The palletizer will spawn pallets based on what line does not have a pallet/needs one/least full and will not generate one until needed. Once a pallet is made it will all be sorted on one conveyor and then stacked in inventory.
