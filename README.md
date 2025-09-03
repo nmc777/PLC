@@ -13,3 +13,24 @@ Changes position when pressed, and latches in that position.
 
 Multistate Pushbutton
 Same as maintained, but you have more than 2 states. When you click the button, it goes to the next state. Thus it increments by 1 each click.
+
+Diffuse Sensor
+Emit infrared light, and detect the reflected light from an object back into the sensor.
+
+Retroreflective Sensor
+Emits light tworads sensor on opposite end, when this is cut off, the sensor indicates an object present.
+
+Capactive Sensor
+Detect changes in capacitance wehn an object approaches the sensor. For plastic, non-metal
+
+Inductive Sensor
+Detect metal objects whent hey enter the field. Disrupts magnetic field.
+
+There will be a emitter,
+It will spew Blue,Green,Metal, pieces. (plastic and metal)
+Upon infeed conveyor entry it will be scanned by a capactive and inductive sensor (will a vision sensor accomplish the same?)
+to identify a count of the RAW parts produced via metal or plastic.
+There will be a lineup waiting at the infeed, so everytime a part is finally done in the machine cycle, the conveyor will move uo by 1. This means that the emitter must be in sequence so it doesnt overproduce parts during the wait.
+On the Machining Centre will be an HMI that displays total ASSEMBLED parts produced via metal and plastic, this may need a sensor at the output of the machining sensor to identify assembled parts. OR you can wait for completion bit to finish form machining centre and 
+apply count based on what was scanned by the infeed sensor.
+On outfeed, based on material it will be scaled, and then a sensor will trigger a pusher which will sepere material onto 2 conveyors, one for metal, one for plastic.
