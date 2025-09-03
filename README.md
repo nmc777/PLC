@@ -36,3 +36,20 @@ On the Machining Centre will be an HMI that displays total ASSEMBLED parts produ
 apply count based on what was scanned by the infeed sensor.
 On outfeed, it will be scaled,after the scaling cycle, it will move forward and then a sensor will detect if its a metal piece, if it is a pusher will slide it over to the next conveyor, if not. It enters the popup sorter and is sperated by color.
 The palletizer will spawn pallets based on what line does not have a pallet/needs one/least full and will not generate one until needed. Once a pallet is made it will all be sorted on one conveyor and then stacked in inventory.
+Metal parts can be
+
+Conveyor IO
+Machining Center IO
+Sensors IO
+Weight scale & display IO
+Pusher IO
+Roller Pins Conveyor
+Pop up wheel L,R,F IO
+Palletizer IO
+Chain Transer IO
+Timers based on sensors,
+Emitter spawning base don sensor.
+Parts created (type) vs Parts Produced.
+Auto Manual Mode Selector IO
+
+
