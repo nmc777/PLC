@@ -52,4 +52,35 @@ Emitter spawning base don sensor.
 Parts created (type) vs Parts Produced.
 Auto Manual Mode Selector IO
 
+The most ocmmonly used trigger signals are between 4-20ma
+Digital Sesory / Binary Sensor
+Returns 1 or more bits of information per sensor, usually triggered by a limit switch (a witch that closes the circuit when it reaches its final position).
+
+Proximity Sensor
+USed for detecting close magnetic objects using magtic fields, these have replaced limit switches
+Optical Sensors
+Much longer range, but suceseptible to dirt and other interferences because they use light as a signal.
+Capactivive Sensor
+Fror non metal materials, historically have nobeen bery ependable
+Ultrasonic Prox sensor
+Detet objects using hig frequency sound, sucseptible to dirt and enviornmental interference,
+Auxillary Contact
+Part of a relay , these tell us whne whatever is controlling the relay is turne don or off.
+Analog Sesor
+Converts quantity into voltage or current (temp pressure humidity distance speed)
+Inductice Proximity Switch
+Do not sense metals all the same, they have different sensing ranges for non ferrous and ferrous metals.
+
+Directional Control Valves / Solenoid Valves/ Spool Valves 
+
+Limit switches are able to handle high amoutns of current due to their size.
+Most applications default to meter-out for control speed regulation
+Through Beam Sensors have the longest range.
+A diffuse photoelectric sensor that is able to be taught to ignore objects in the background uses a technique known as Background Suppression
+	
+If you have a 5/3 valve the 5 represents the number of ports the valve has
+Meter in vs Meter Out
+
+Shielded & Unshielded Mounting Options
+
 
