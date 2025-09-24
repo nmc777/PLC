@@ -83,4 +83,30 @@ Meter in vs Meter Out
 
 Shielded & Unshielded Mounting Options
 
+Diagrams
+A typical layout of an industrial control system consists of the following
+-Table of Contents/Index
+-Machine/Deice Layouts
+-High Voltage Distribution
+-Low Voltage Distribution
+-PLC/IO Sheets/ Safety
+-BOM
 
+Electrical Diagram Types
+-Pictorial Diagram
+	Uses pictures to represent different components and often shows more detail than a wiring 		diagram
+-Wiring Diagram
+	Contain assembly connection information
+	Diagram that is a simpolified pictorial representation of a circuit
+	Helps you build and is arranged the same way as the physical layout
+-Ladder Diagram/Line Diagram / Schematic Diagram (Most common and preferred)
+Describe drawings that show how a specific unit is wired including power, control and instrumentation on one drawing. These drawings are often vendor supplied
+	Complete engineering information such as voltage levels and test points,
+	Diagram showing the logic of a circuit, but now the physical relationship of the components.
+	Helps you understand (inputs o the left outputs on the right)
+-Single Line Diagram
+	Used to describe drawings that show cables and connection or juction boxes. They have CableID, Wire ID, and Junciton box ID. They do not show terminations. They are divided into Power Circuit, Instrumentation Circuit, and Control Circuit. They act as a road map to follow how the factory is wired.
+
+
+	Typically used in power distribution drawings where its understood One Line represents a 3 		phase power system.
+	Overall conceptual layout of a circuit, condense three-phase to single lines for simplicity.
