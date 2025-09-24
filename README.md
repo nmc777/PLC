@@ -105,6 +105,7 @@ Describe drawings that show how a specific unit is wired including power, contro
 	Diagram showing the logic of a circuit, but now the physical relationship of the components.
 	Helps you understand (inputs o the left outputs on the right)
 -Single Line Diagram
+	The basic concept behind a one-line drawing is minimalism. Where one lines is used to represent many lines. Used to give a general indication  of the relationship between various aspects
 	Used to describe drawings that show cables and connection or juction boxes. They have CableID, Wire ID, and Junciton box ID. They do not show terminations. They are divided into Power Circuit, Instrumentation Circuit, and Control Circuit. They act as a road map to follow how the factory is wired.
 
 
