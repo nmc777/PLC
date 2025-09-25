@@ -118,6 +118,22 @@
 
 <img width="897" height="276" alt="wiring references" src="https://github.com/user-attachments/assets/7f687232-18f9-4abf-96dc-4e580596f3e9" />
 
+### Wiring Numbers
+<img width="900" height="438" alt="image" src="https://github.com/user-attachments/assets/2ce3e13e-da5d-46ba-874d-0637fb8dab92" />
+<img width="1004" height="460" alt="image" src="https://github.com/user-attachments/assets/a999b0ee-1f6c-440f-8129-58eb964d9cd6" />
+### 3 Phase Wiring Numbers
+<img width="963" height="472" alt="image" src="https://github.com/user-attachments/assets/c89839d7-922a-42fd-a87b-a4d025c0e804" />
+### Wiring Number Changes
+<img width="969" height="455" alt="image" src="https://github.com/user-attachments/assets/27cfb47d-c6f1-4338-be63-832ecb55f649" />
+<img width="1024" height="459" alt="image" src="https://github.com/user-attachments/assets/a4b0526b-0c8a-4ef5-8d32-cbaa5082f5ec" />
+Because the voltages stay the same it does not change wire numbers
+<img width="1015" height="462" alt="image" src="https://github.com/user-attachments/assets/b5834a96-fba2-4407-87ef-f0e57de6295f" />
+### Device Nunmbers
+<img width="916" height="406" alt="image" src="https://github.com/user-attachments/assets/b10a78e8-2974-442d-b9fb-b111ae6f3bbd" />
+<img width="970" height="456" alt="image" src="https://github.com/user-attachments/assets/f2f823bd-c64d-46ce-b6b7-b4b890d22eb8" />
+<img width="1013" height="470" alt="image" src="https://github.com/user-attachments/assets/9cb9d8d4-bf70-4c29-b109-3fb8666ef5a7" />
+
+
 ---
 
 ## Standard Diagram Layout
