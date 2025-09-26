@@ -116,8 +116,13 @@ electical circuit.
   Mechanical switch tat uses contact with a part to physically move its internal contacts
   No electronics built inside (Dry Contact)
   Often used with "Door closed" or "Part PResent"
-### Contactor / Motor Contacto
-Devices used for establishing nad interrupting a w=electrica power circuit.
+### Contactor
+Devices used to establish and disconnect power to a load (lights,heaters transformers)
+AC contactors generally have multiple contacts. DC contactors generally have one.
+They also have AUX contacts used to control other components.
+
+### Motor Contactor
+Used to start and stop motors, a motor starter is equipped with na overload relay. A Contact is not. The overload relay has bimetallic sensors that disconnect the circuit.
 ## Diagram Types
 
 ### Pictorial Diagram
