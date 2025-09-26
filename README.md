@@ -166,6 +166,25 @@ Because the voltages stay the same it does not change wire numbers
 <img width="1013" height="470" alt="image" src="https://github.com/user-attachments/assets/9cb9d8d4-bf70-4c29-b109-3fb8666ef5a7" />
 
 
+## Motor Control and Proteciton
+  A manual control circuit requires a person to initiate an action for the circuit to operate.
+  A motor goes through 3 stages during normal operation:
+  Resting
+  Starting
+  A motor that is starting draws in a major inruhs current (normally 6-8 times the Running current)
+  When starting, fuses or crcuit breakers must have a sufficiently high ampere rating to avoid immediate opening of the circuit.
+  Operating under load         
+
+  ### Locked Rotor Current
+  Higest level of inrush current which occurs the moment the motor is turned on.
+  ### Fully Loaded Current
+  Current level required to produce full load torque on the motor shaft at rated speed.
+  ### Ambient Temperature
+  Tempurature of air surrounding a piece of euipment.
+  ### Temperature Rise
+  The difference between the winding tempurate of a running motor and its ambient temperature. The temperature rise at FLC is not harmful providd that the ambient rempaerature
+  does not exceed the ambient temperature limit.
+  
 ---
 
 ## Standard Diagram Layout
