@@ -91,12 +91,34 @@
 - **Diffuse Photoelectric with Background Suppression** → Learns to ignore background objects.  
 
 ---
+## Industrial Control Devices
+### Solid State Relay (SSR)
 
+  SSRs can be used for:
+  -High speed applications
+  -High vibration environemnts
+  -Applications where a relay needs to be located near sensitive automation components (PLCs, HMI's, temperature controls)
+  -Dusty or humid environments
+  -
+    SSR's can fail closed or open
+    The solid State relay has no moving components and is replaying EMRs due to ease of use, low nose production, extra safety feautures and long lifespan
+    SSR's produce a lot of heat and need heat sinks for dissipation
+### Electromechanical Relay
+  Built to fail open or closed,if wired to desirable failure mode.
+  Make clack noise when switched on, and erode during prolonged switching\
+  Shorter lifespan that SSR 
+### Limit Switch
+  Used to get inputs from moving parts of a machine
+  Mechanical switch tat uses contact with a part to physically move its internal contacts
+  No electronics built inside (Dry Contact)
+  Often used with "Door closed" or "Part PResent"
+### Contactor / Motor Contacto
 ## Diagram Types
 
 ### Pictorial Diagram
 - Uses pictures of components.  
-- Shows more detail than wiring diagrams.  
+- Shows more detail than wiring diagrams.
+    
 
 ### Wiring Diagram
 - Shows connections + assembly details.  
