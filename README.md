@@ -103,6 +103,10 @@
     SSR's can fail closed or open
     The solid State relay has no moving components and is replaying EMRs due to ease of use, low nose production, extra safety feautures and long lifespan
     SSR's produce a lot of heat and need heat sinks for dissipation
+## Contorl Relays
+A control relay is a swithc controlled by a electircal current. There are 2 types, EMR, and SSR.
+A  contorl relay will consist of a coul and a combinaiton of N.O nad N.C dry contacts. Relays open and close contacts in another
+electical circuit.
 ### Electromechanical Relay
   Built to fail open or closed,if wired to desirable failure mode.
   Make clack noise when switched on, and erode during prolonged switching\
@@ -113,6 +117,7 @@
   No electronics built inside (Dry Contact)
   Often used with "Door closed" or "Part PResent"
 ### Contactor / Motor Contacto
+Devices used for establishing nad interrupting a w=electrica power circuit.
 ## Diagram Types
 
 ### Pictorial Diagram
