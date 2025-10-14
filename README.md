@@ -184,6 +184,16 @@ Because the voltages stay the same it does not change wire numbers
   ### Temperature Rise
   The difference between the winding tempurate of a running motor and its ambient temperature. The temperature rise at FLC is not harmful providd that the ambient rempaerature
   does not exceed the ambient temperature limit.
+  ###
+  Starters that are intended to protect motors that operate on 240 volts contain TWO load contacts.
+  240V sdystems have two hots wires, each at 120v. These are considered Two Phase Systems.
+  Systems that use 3 Phase:
+  HVAC
+  Water Pumps
+  Machine Shop MAchinery
+
+  The heating elements (heaters) installed in a motor starter do not open during an overload. The heating elements themselves are not switches, but
+  sensing components.Instead, they trigger auxillary contacts, that opens the circuit to protect the motor.
   
 ---
 
