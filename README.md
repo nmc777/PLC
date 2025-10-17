@@ -190,10 +190,10 @@ Because the voltages stay the same it does not change wire numbers
   Systems that use 3 Phase:
   HVAC
   Water Pumps
-  Machine Shop MAchinery
+  Machine Shop Machinery
 
   The heating elements (heaters) installed in a motor starter do not open during an overload. The heating elements themselves are not switches, but
-  sensing components.Instead, they trigger auxillary contacts, that opens the circuit to protect the motor.
+  sensing components.Instead, they trigger auxillary contacts, that opens the circuit to protect the motor from heat caused by excessive current.
   
 ---
 
