@@ -134,7 +134,7 @@ Used to start and stop motors, a motor starter is equipped with na overload rela
 - Shows connections + assembly details.  
 - Simplified pictorial, arranged like physical layout.  
 
-### Ladder / Line / Schematic Diagram
+### Ladder / Line Diagram
 - Most common for PLC/controls.  
 - Inputs on left, outputs on right.  
 - Shows circuit logic, not physical layout.  
@@ -192,9 +192,33 @@ Because the voltages stay the same it does not change wire numbers
   Water Pumps
   Machine Shop Machinery
 
+  ### 2.What is a Line Diagram?
+  A Line diagram is a electrical design for PLC/control systems. It shows circuit logic and logical connections, but no physical components.
+  The function of a line diagram is to provide a graphical outline of how components are interconnected in a PLC system.
+  Electronically connected and wired devices are illustrated with a single line and N.O and N.C contacts representing the devices.
+
   The heating elements (heaters) installed in a motor starter do not open during an overload. The heating elements themselves are not switches, but
   sensing components.Instead, they trigger auxillary contacts, that opens the circuit to protect the motor from heat caused by excessive current.
-  
+
+  ### 3.What type of Diagram is Used ot Show as Closely as Possible the Actual Location of each Connection in a Circuit?
+  A wiring diagram is  apictorial diagram which illustrates the physical connections of a circuit.
+
+  ### 4.What type of diagram shows the logic, components, and the current paths of an electrical circuit but not the wire connection detail? 
+  A Line diagram 
+
+  ### 5.How is each line in a line diagram marked to distinguish that line from all other lines? 
+  Each line is distinguishable via Line reference number sequentially going downward starting from the beginning, and at the top of the page.
+
+  ### 6.What are numerical cross-reference systems?
+  References used to trace auxillary contacts controlled by motor starters, relays and contactors.
+
+  ### 7.What are the two methods used to illustrate how contacts found in different control lines belong to the same control switch, such as a limit switch? 
+  Interconnected components are represented by a dashed line, indicating a mechnical connection.
+
+  ### 8. What is Control Language?
+  Control language communcates the fucntion of electrical components and establishes understanding between each device in a circuit. It facilitates control circuits and troubleshooting
+
+
 ---
 
 ## Standard Diagram Layout
