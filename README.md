@@ -1,134 +1,4 @@
-# PLC & Industrial Controls Notes
 
-## PanelView Plus: Standard vs Performance
-- **Performance**
-  - For large, complex, industrial systems.  
-  - Higher processing power, memory, screen options, and enhanced connectivity.  
-- **Standard**
-  - For smaller, standalone systems.  
-  - Limited processing power, memory, and screen size.  
-- **Key Difference:** Different firmware and hardware.
-
----
-
-## Pushbutton Types
-- **Momentary Pushbutton** – Active only while pressed.  
-- **Maintained Pushbutton** – Latches in pressed position until pressed again.  
-- **Multistate Pushbutton** – More than 2 states; increments on each press.  
-
----
-
-## Sensor Types
-- **Diffuse Sensor** – Emits infrared light, detects reflection.  
-- **Retroreflective Sensor** – Detects light cut off from reflector.  
-- **Capacitive Sensor** – Detects capacitance changes (non-metal, e.g., plastic).  
-- **Inductive Sensor** – Detects metal by magnetic field disruption.  
-- **Proximity Sensor** – Detects close magnetic objects.  
-- **Optical Sensor** – Uses light, longer range, but dirt sensitive.  
-- **Ultrasonic Proximity Sensor** – Detects objects using high-frequency sound.  
-- **Analog Sensor** – Converts physical quantity to voltage/current.  
-- **Inductive Proximity Switch** – Different ranges for ferrous vs non-ferrous metals.  
-
----
-
-## Example Machine Operation
-- **Modes**: Manual / Auto.  
-- **Emitter**: Produces Blue, Green, and Metal pieces.  
-- **Infeed Conveyor**:
-  - Uses capacitive + inductive sensors to classify (plastic vs metal).  
-  - Could be replaced by a vision sensor.  
-  - Counts raw parts.  
-  - Moves forward by 1 each machine cycle.  
-  - Must be sequenced to avoid overproduction.  
-- **Machining Centre**:
-  - HMI displays total assembled parts (plastic vs metal).  
-  - Count based on:
-    - Output sensor OR  
-    - Machine completion bit matched to infeed scan.  
-- **Outfeed Conveyor**:
-  - Scaled (weight).  
-  - Metal detection + pusher to side conveyor.  
-  - Non-metal → popup sorter by color.  
-- **Palletizer**:
-  - Spawns pallets only when needed (least full or empty line).  
-  - Sorted onto conveyor → stacked into inventory.  
-
----
-
-## IO Categories
-- Conveyor IO  
-- Machining Center IO  
-- Sensor IO  
-- Weight Scale & Display IO  
-- Pusher IO  
-- Roller Pins Conveyor  
-- Popup Wheel (L, R, F) IO  
-- Palletizer IO  
-- Chain Transfer IO  
-- Auto/Manual Mode Selector IO  
-
----
-
-## Signal Types
-- **Analog**: 4–20 mA common.  
-- **Digital/Binary Sensors**: Return 1+ bits (limit switch).  
-- **Auxiliary Contact**: Relay status feedback.  
-
----
-
-## Valves
-- **Directional Control / Solenoid / Spool Valves**  
-- Limit switches can handle high current.  
-- Most applications → **meter-out** flow control.  
-- **5/3 valve** → 5 ports, 3 positions.  
-- **Meter-in vs Meter-out** – speed regulation method.  
-- **Shielded vs Unshielded Mounting** – affects sensing range.  
-
----
-
-## Sensor Characteristics
-- **Through Beam Sensors** → Longest range.  
-- **Diffuse Photoelectric with Background Suppression** → Learns to ignore background objects.  
-
----
-## Industrial Control Devices
-### Solid State Relay (SSR)
-
-  SSRs can be used for:
-  -High speed applications
-  -High vibration environemnts
-  -Applications where a relay needs to be located near sensitive automation components (PLCs, HMI's, temperature controls)
-  -Dusty or humid environments
-  -
-    SSR's can fail closed or open
-    The solid State relay has no moving components and is replaying EMRs due to ease of use, low nose production, extra safety feautures and long lifespan
-    SSR's produce a lot of heat and need heat sinks for dissipation
-## Contorl Relays
-A control relay is a swithc controlled by a electircal current. There are 2 types, EMR, and SSR.
-A  contorl relay will consist of a coul and a combinaiton of N.O nad N.C dry contacts. Relays open and close contacts in another
-electical circuit.
-### Electromechanical Relay
-  Built to fail open or closed,if wired to desirable failure mode.
-  Make clack noise when switched on, and erode during prolonged switching\
-  Shorter lifespan that SSR 
-### Limit Switch
-  Used to get inputs from moving parts of a machine
-  Mechanical switch tat uses contact with a part to physically move its internal contacts
-  No electronics built inside (Dry Contact)
-  Often used with "Door closed" or "Part PResent"
-### Contactor
-Devices used to establish and disconnect power to a load (lights,heaters transformers)
-AC contactors generally have multiple contacts. DC contactors generally have one.
-They also have AUX contacts used to control other components.
-
-### Motor Contactor
-Used to start and stop motors, a motor starter is equipped with na overload relay. A Contact is not. The overload relay has bimetallic sensors that disconnect the circuit.
-## Diagram Types
-
-### Pictorial Diagram
-- Uses pictures of components.  
-- Shows more detail than wiring diagrams.
-    
 
 ### Wiring Diagram
 - Shows connections + assembly details.  
@@ -165,66 +35,482 @@ Because the voltages stay the same it does not change wire numbers
 <img width="970" height="456" alt="image" src="https://github.com/user-attachments/assets/f2f823bd-c64d-46ce-b6b7-b4b890d22eb8" />
 <img width="1013" height="470" alt="image" src="https://github.com/user-attachments/assets/9cb9d8d4-bf70-4c29-b109-3fb8666ef5a7" />
 
-
-## Motor Control and Proteciton
-  A manual control circuit requires a person to initiate an action for the circuit to operate.
-  A motor goes through 3 stages during normal operation:
-  Resting
-  Starting
-  A motor that is starting draws in a major inruhs current (normally 6-8 times the Running current)
-  When starting, fuses or crcuit breakers must have a sufficiently high ampere rating to avoid immediate opening of the circuit.
-  Operating under load         
-
-  ### Locked Rotor Current
-  Higest level of inrush current which occurs the moment the motor is turned on.
-  ### Fully Loaded Current
-  Current level required to produce full load torque on the motor shaft at rated speed.
-  ### Ambient Temperature
-  Tempurature of air surrounding a piece of euipment.
-  ### Temperature Rise
-  The difference between the winding tempurate of a running motor and its ambient temperature. The temperature rise at FLC is not harmful providd that the ambient rempaerature
-  does not exceed the ambient temperature limit.
-  ###
-  Starters that are intended to protect motors that operate on 240 volts contain TWO load contacts.
-  240V sdystems have two hots wires, each at 120v. These are considered Two Phase Systems.
-  Systems that use 3 Phase:
-  HVAC
-  Water Pumps
-  Machine Shop Machinery
-
-  ### 2.What is a Line Diagram?
-  A Line diagram is a electrical design for PLC/control systems. It shows circuit logic and logical connections, but no physical components.
-  The function of a line diagram is to provide a graphical outline of how components are interconnected in a PLC system.
-  Electronically connected and wired devices are illustrated with a single line and N.O and N.C contacts representing the devices.
-
-  The heating elements (heaters) installed in a motor starter do not open during an overload. The heating elements themselves are not switches, but
-  sensing components.Instead, they trigger auxillary contacts, that opens the circuit to protect the motor from heat caused by excessive current.
-
-  ### 3.What type of Diagram is Used ot Show as Closely as Possible the Actual Location of each Connection in a Circuit?
-  A wiring diagram is  apictorial diagram which illustrates the physical connections of a circuit.
-
-  ### 4.What type of diagram shows the logic, components, and the current paths of an electrical circuit but not the wire connection detail? 
-  A Line diagram 
-
-  ### 5.How is each line in a line diagram marked to distinguish that line from all other lines? 
-  Each line is distinguishable via Line reference number sequentially going downward starting from the beginning, and at the top of the page.
-
-  ### 6.What are numerical cross-reference systems?
-  References used to trace auxillary contacts controlled by motor starters, relays and contactors.
-
-  ### 7.What are the two methods used to illustrate how contacts found in different control lines belong to the same control switch, such as a limit switch? 
-  Interconnected components are represented by a dashed line, indicating a mechnical connection.
-
-  ### 8. What is Control Language?
-  Control language communcates the fucntion of electrical components and establishes understanding between each device in a circuit. It facilitates control circuits and troubleshooting
-
+# PLC & Industrial Controls Reference Guide
 
 ---
 
-## Standard Diagram Layout
-1. Table of Contents / Index  
-2. Machine / Device Layouts  
-3. High Voltage Distribution  
-4. Low Voltage Distribution  
-5. PLC / IO Sheets / Safety  
-6. BOM (Bill of Materials)  
+## Table of Contents
+
+1. [HMI Systems](#1-hmi-systems)
+2. [Input Devices](#2-input-devices)
+   - 2.1 [Pushbutton Types](#21-pushbutton-types)
+   - 2.2 [Sensor Types](#22-sensor-types)
+   - 2.3 [Limit Switches](#23-limit-switches)
+3. [Control Devices](#3-control-devices)
+   - 3.1 [Relays](#31-relays)
+   - 3.2 [Contactors](#32-contactors)
+4. [Motor Control](#4-motor-control)
+   - 4.1 [Motor Operating Stages](#41-motor-operating-stages)
+   - 4.2 [Current Types](#42-current-types)
+   - 4.3 [Temperature Specifications](#43-temperature-specifications)
+   - 4.4 [Motor Protection](#44-motor-protection)
+5. [Valve Systems](#5-valve-systems)
+6. [Signal Types](#6-signal-types)
+7. [Diagram Types](#7-diagram-types)
+8. [Wiring Standards](#8-wiring-standards)
+9. [Example System Architecture](#9-example-system-architecture)
+10. [Quick Reference Tables](#10-quick-reference-tables)
+
+---
+
+## 1. HMI Systems
+
+### PanelView Plus Comparison
+
+| Feature | Standard | Performance |
+|---------|----------|-------------|
+| **Application** | Smaller, standalone systems | Large, complex industrial systems |
+| **Processing Power** | Limited | High |
+| **Memory** | Limited | Enhanced |
+| **Screen Options** | Limited sizes | Multiple size options |
+| **Connectivity** | Basic | Enhanced |
+| **Firmware/Hardware** | Different architecture | Different architecture |
+
+---
+
+## 2. Input Devices
+
+### 2.1 Pushbutton Types
+
+| Type | Description | Behavior |
+|------|-------------|----------|
+| **Momentary** | Active only while pressed | Returns to default state when released |
+| **Maintained** | Latches in position | Stays pressed until pressed again |
+| **Multistate** | More than 2 states | Increments through states on each press |
+
+### 2.2 Sensor Types
+
+| Sensor Type | Detection Method | Best Use Case | Notes |
+|-------------|------------------|---------------|-------|
+| **Diffuse** | Infrared light reflection | General object detection | Short to medium range |
+| **Retroreflective** | Light interruption from reflector | Long-range detection | Requires reflector installation |
+| **Through Beam** | Direct light beam interruption | Longest range applications | Emitter and receiver separate |
+| **Capacitive** | Capacitance changes | Non-metallic materials (plastic, liquid) | Can detect through containers |
+| **Inductive** | Magnetic field disruption | Metal detection | Different ranges for ferrous vs non-ferrous |
+| **Inductive Proximity** | Magnetic field | Metal proximity detection | Range varies by metal type |
+| **Proximity** | Magnetic field | Close-range magnetic objects | Limited range |
+| **Optical** | Light beam | Long-range detection | Sensitive to dirt/contamination |
+| **Ultrasonic** | High-frequency sound waves | Various materials | Works in dusty environments |
+| **Analog** | Physical quantity conversion | Continuous measurement | Outputs voltage/current signal |
+| **Diffuse with Background Suppression** | Learned background filtering | Cluttered environments | Ignores background objects |
+
+### 2.3 Limit Switches
+
+- **Function**: Obtain inputs from moving machine parts
+- **Operation**: Mechanical contact physically moves internal contacts
+- **Construction**: No internal electronics (dry contact)
+- **Common Uses**: 
+  - Door position sensing ("Door Closed")
+  - Part presence detection ("Part Present")
+
+---
+
+## 3. Control Devices
+
+### 3.1 Relays
+
+#### Control Relay Overview
+A switch controlled by electrical current consisting of a coil and combination of N.O. (Normally Open) and N.C. (Normally Closed) dry contacts. Opens and closes contacts in another electrical circuit.
+
+#### Electromechanical Relay (EMR)
+
+| Characteristic | Description |
+|----------------|-------------|
+| **Failure Mode** | Built to fail open or closed (configurable) |
+| **Operation** | Makes audible "clack" noise when switched |
+| **Wear** | Contact erosion during prolonged switching |
+| **Lifespan** | Shorter than SSR |
+| **Noise** | Audible operation |
+
+#### Solid State Relay (SSR)
+
+| Characteristic | Description |
+|----------------|-------------|
+| **Moving Parts** | None |
+| **Heat Generation** | Significant (requires heat sinks) |
+| **Noise** | Silent operation |
+| **Lifespan** | Longer than EMR |
+| **Failure Mode** | Can fail open or closed |
+| **Safety Features** | Enhanced compared to EMR |
+
+**SSR Applications:**
+- High-speed switching applications
+- High-vibration environments
+- Near sensitive automation components (PLCs, HMIs, temperature controls)
+- Dusty or humid environments
+
+### 3.2 Contactors
+
+#### General Contactors
+
+| Type | Contacts | Purpose |
+|------|----------|---------|
+| **AC Contactor** | Multiple contacts | Establish/disconnect power to loads (lights, heaters, transformers) |
+| **DC Contactor** | Generally one contact | Establish/disconnect DC power |
+
+**Features:**
+- Include auxiliary (AUX) contacts for controlling other components
+- Used for high-power switching applications
+
+#### Motor Contactors/Starters
+
+**Key Difference**: Motor starter includes an overload relay; basic contactor does not.
+
+**Overload Protection:**
+- Bimetallic sensors monitor current
+- Automatically disconnect circuit during overload conditions
+- Heating elements act as sensing components (not switches)
+- Trigger auxiliary contacts that open the circuit
+
+**Voltage Considerations:**
+- 240V starters contain TWO load contacts
+- 240V systems use two hot wires at 120V each (two-phase systems)
+
+---
+
+## 4. Motor Control
+
+### 4.1 Motor Operating Stages
+
+| Stage | Description |
+|-------|-------------|
+| **Resting** | Motor is stopped, no current draw |
+| **Starting** | High inrush current (6-8× running current) |
+| **Operating Under Load** | Steady-state current at rated speed |
+
+### 4.2 Current Types
+
+| Current Type | Description | Typical Value |
+|--------------|-------------|---------------|
+| **Locked Rotor Current** | Highest inrush current at startup | 6-8× FLC |
+| **Fully Loaded Current (FLC)** | Current required for full load torque at rated speed | Nameplate rating |
+
+### 4.3 Temperature Specifications
+
+| Parameter | Definition |
+|-----------|------------|
+| **Ambient Temperature** | Temperature of air surrounding equipment |
+| **Temperature Rise** | Difference between winding temperature and ambient temperature during operation |
+
+**Note**: Temperature rise at FLC is acceptable if ambient temperature stays within equipment limits.
+
+### 4.4 Motor Protection
+
+**Fuse/Circuit Breaker Sizing:**
+- Must have sufficiently high ampere rating to accommodate startup inrush current
+- Prevents nuisance tripping during normal motor starting
+
+**Three-Phase Systems:**
+Used in:
+- HVAC systems
+- Water pumps
+- Machine shop machinery
+
+---
+
+## 5. Valve Systems
+
+### Valve Types
+
+| Type | Description |
+|------|-------------|
+| **Directional Control Valve** | Controls flow direction |
+| **Solenoid Valve** | Electrically operated valve |
+| **Spool Valve** | Uses sliding spool to control flow |
+
+### Valve Specifications
+
+**5/3 Valve**: 5 ports, 3 positions
+
+### Flow Control Methods
+
+| Method | Description | Application |
+|--------|-------------|-------------|
+| **Meter-In** | Controls flow entering actuator | Speed regulation |
+| **Meter-Out** | Controls flow exiting actuator | Most common application |
+
+### Installation Considerations
+
+| Mounting Type | Effect |
+|---------------|--------|
+| **Shielded** | Reduced sensing range |
+| **Unshielded** | Increased sensing range |
+
+---
+
+## 6. Signal Types
+
+| Signal Type | Description | Common Standard |
+|-------------|-------------|-----------------|
+| **Analog** | Continuous signal | 4-20 mA |
+| **Digital/Binary** | Discrete on/off signal | Returns 1+ bits |
+| **Auxiliary Contact** | Relay status feedback | Dry contact |
+
+---
+
+## 7. Diagram Types
+
+### Diagram Comparison Table
+
+| Diagram Type | Purpose | Key Features |
+|--------------|---------|--------------|
+| **Pictorial** | Visual component representation | Uses component pictures, most detailed |
+| **Wiring** | Physical connections | Shows assembly details and physical layout |
+| **Ladder/Line** | Logic representation | Inputs left, outputs right; shows circuit logic |
+| **Single Line** | Power distribution | One line represents multiple (e.g., 3-phase) |
+
+### Line Diagram Details
+
+**Most Common for PLC/Controls**
+
+**Layout:**
+- Inputs positioned on left side
+- Outputs positioned on right side
+- Shows circuit logic (not physical layout)
+- Includes voltages and test points
+
+**Line Identification:**
+- Sequential line reference numbers
+- Numbered from top to bottom
+- Distinguishes each line uniquely
+
+**Cross-Reference Systems:**
+- Numerical references trace auxiliary contacts
+- Links controls across motor starters, relays, and contactors
+- Dashed lines indicate mechanical connections
+
+### Single Line Diagram
+
+**Purpose**: Power distribution drawings
+
+**Circuit Types:**
+1. Power Circuit
+2. Instrumentation Circuit
+3. Control Circuit
+
+**Includes:**
+- Cable ID
+- Wire ID
+- Junction Box ID
+
+### Wiring Diagram
+
+**Characteristics:**
+- Pictorial representation
+- Illustrates physical connections
+- Shows actual location of connections
+- Arranged like physical layout
+- Simplified pictorial format
+
+---
+
+## 8. Wiring Standards
+
+### Wire Numbering Rules
+
+**General Principles:**
+- Wires maintain numbers when voltage remains constant
+- Numbers change when passing through components that change voltage
+- Sequential numbering system for organization
+
+### Device Numbering
+
+Components are numbered sequentially for identification and troubleshooting purposes.
+
+---
+
+## 9. Example System Architecture
+
+### Production Line IO Categories
+
+| Category | Description |
+|----------|-------------|
+| **Conveyor IO** | Belt control and monitoring |
+| **Machining Center IO** | Processing equipment interface |
+| **Sensor IO** | Detection and measurement devices |
+| **Weight Scale & Display IO** | Weighing system interface |
+| **Pusher IO** | Part routing mechanisms |
+| **Roller Pins Conveyor** | Material handling |
+| **Popup Wheel IO** | Sorting mechanisms (Left, Right, Forward) |
+| **Palletizer IO** | Stacking and organizing |
+| **Chain Transfer IO** | Product transfer systems |
+| **Auto/Manual Mode Selector IO** | Operation mode control |
+
+### System Operation Modes
+
+| Mode | Description |
+|------|-------------|
+| **Manual** | Operator-controlled operation |
+| **Auto** | Automated sequence control |
+
+### Example Production Process
+
+#### Emitter Station
+Produces three part types:
+- Blue (plastic)
+- Green (plastic)
+- Metal
+
+#### Infeed Conveyor
+- **Sensors**: Capacitive + Inductive (classifies plastic vs metal)
+- **Alternative**: Vision sensor
+- **Function**: Counts raw parts
+- **Movement**: Advances one position per machine cycle
+- **Control**: Sequenced to prevent overproduction
+
+#### Machining Centre
+- **HMI Display**: Total assembled parts (separated by plastic/metal)
+- **Counting Methods**:
+  - Output sensor detection, OR
+  - Machine completion bit matched to infeed scan
+
+#### Outfeed Conveyor
+**Processing Stages:**
+1. **Weighing**: Scale measures part weight
+2. **Metal Detection**: Identifies metal parts
+3. **Metal Routing**: Pusher diverts to side conveyor
+4. **Non-metal Sorting**: Popup sorter by color
+
+#### Palletizer
+- **Intelligence**: Spawns pallets only when needed
+- **Strategy**: Routes to least full or empty line
+- **Process**: Parts sorted onto conveyor → stacked into inventory
+
+---
+
+## 10. Quick Reference Tables
+
+### Control Language & Documentation
+
+| Term | Definition |
+|------|------------|
+| **Control Language** | Communicates function of electrical components and establishes device understanding |
+| **Purpose** | Facilitates control circuit design and troubleshooting |
+
+### Standard Documentation Layout
+
+| Section | Content |
+|---------|---------|
+| 1 | Table of Contents / Index |
+| 2 | Machine / Device Layouts |
+| 3 | High Voltage Distribution |
+| 4 | Low Voltage Distribution |
+| 5 | PLC / IO Sheets / Safety |
+| 6 | BOM (Bill of Materials) |
+
+### Sensor Range Comparison
+
+| Sensor Type | Relative Range |
+|-------------|----------------|
+| Through Beam | Longest |
+| Retroreflective | Long |
+| Diffuse with Background Suppression | Medium |
+| Diffuse | Medium-Short |
+| Proximity | Short |
+
+### Key Definitions
+
+| Term | Definition |
+|------|------------|
+| **Manual Control Circuit** | Requires person to initiate action for operation |
+| **Dry Contact** | Mechanical contact with no internal electronics |
+| **Auxiliary Contact** | Provides relay/contactor status feedback |
+| **N.O. (Normally Open)** | Contact open when device is de-energized |
+| **N.C. (Normally Closed)** | Contact closed when device is de-energized |
+
+---
+
+## Index
+
+**A**
+- Ambient Temperature, 4.3
+- Analog Sensors, 2.2, 6
+
+**C**
+- Capacitive Sensors, 2.2
+- Contactors, 3.2
+- Control Language, 10
+- Control Relays, 3.1
+- Current Types, 4.2
+
+**D**
+- Diagram Types, 7
+- Diffuse Sensors, 2.2
+- Digital Signals, 6
+
+**E**
+- Electromechanical Relay (EMR), 3.1
+
+**F**
+- Flow Control, 5
+- Fully Loaded Current (FLC), 4.2
+
+**H**
+- HMI Systems, 1
+
+**I**
+- Inductive Sensors, 2.2
+- IO Categories, 9
+
+**L**
+- Ladder Diagrams, 7
+- Limit Switches, 2.3
+- Line Diagrams, 7
+- Locked Rotor Current, 4.2
+
+**M**
+- Maintained Pushbutton, 2.1
+- Meter-In/Meter-Out, 5
+- Momentary Pushbutton, 2.1
+- Motor Control, 4
+- Motor Protection, 4.4
+- Multistate Pushbutton, 2.1
+
+**O**
+- Optical Sensors, 2.2
+- Overload Protection, 3.2, 4.4
+
+**P**
+- PanelView Plus, 1
+- Pictorial Diagrams, 7
+- Proximity Sensors, 2.2
+- Pushbuttons, 2.1
+
+**R**
+- Relays, 3.1
+- Retroreflective Sensors, 2.2
+
+**S**
+- Sensor Types, 2.2
+- Signal Types, 6
+- Single Line Diagrams, 7
+- Solid State Relay (SSR), 3.1
+
+**T**
+- Temperature Rise, 4.3
+- Through Beam Sensors, 2.2
+
+**U**
+- Ultrasonic Sensors, 2.2
+
+**V**
+- Valves, 5
+
+**W**
+- Wiring Diagrams, 7
+- Wiring Standards, 8
+
+---
+
+*Document Version: 1.0*  
+*Last Updated: October 2025*
