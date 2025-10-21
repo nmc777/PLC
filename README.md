@@ -329,6 +329,58 @@ Components are numbered sequentially for identification and troubleshooting purp
 
 ---
 
+## 9. Exercise 3.
+
+### Circuit Breakjers
+-Will trip during an overcurrent for protection
+-GCFI will trip if there is an imbalacne between hot and neutral
+### Timing Relays (TR)
+-Introduces a Time Delay before Opening or Closing Contacts.
+-Acts as a switch that waits for a pre-determined amount of time to pass before
+changing its state
+### Heating Elements
+-The heating elements (heaters) installed in motor starters **do not open during an overload** 
+- Heating elements are designed to protect the otor from overheating due to excessive current
+- The heat causes the bimetalleic strip to bend or trigger which then de-energises the contactor coil and stops the motor.
+### AC Operated Solenoids
+-Use laminated metal core to reduce heat caused by eddy currents
+### Shading Coils
+- Used with AC relays and contactors to reduce chatter when the device is turned on.
+### Solid State Relays
+-When a SSR is used to control a AC load. The load is connected in series with a Triac.
+-No mechanical moving parts, use Diodes, Transistors, Thyristors, Triacs.
+-Instead of mechanical moving contactors, it converts electrical signals to Optical, by triggering an LED which sines across a small gap onto a photosensitive device.
+### What is a Clapper Relay? (Low VoltagE)
+-1 Moveable, 1 Stationary Contact
+- When the circuit is closed, the movable mechanical component called the "clapper" is pulled to the magnetic coil, the pushrod moves forward the contacts.
+-It is possible to control many different circuits at the same time.
+-If pushrod is damaged, the lower contacts may be pushed, but not upper contacts
+-Cannot be used to control High Voltages
+### What is OptoIsolation?
+- Optoisolation is used in SSRs to seperate the outputs using a lightbeam. This prevents electrical noise being transmitted to the control side of the circuit
+
+### Bridge Type Contacts (High Voltage)
+- 1 Moveable, 2 Stationary Contacts.
+- Can be used to control High Voltage
+-Bridge shaped moveable contact that switches on or off to physically bridge two stationary contacts together, allowing it to break or make a connection at two points simultaneously, imagine 2 N.O contacts being triggered
+at the same time.
+
+### Silver Alloys & Siwtching Contacts
+- We use Silver Alloys on switching contacts (such as Bridge Relays) because its arc resistant, low resistantce material with good mechanical strength to endure many opening  abd closings.
+- When silver oxidizes it creates an excellent conductor.
+
+### Arc Supression
+-Arc supression is requred on contacts and motor starters because of the extremely high voltage and current from arc flashes which make equipment
+suceptible to damage.
+### DC Arc Suppression
+-DC Currents also can cause Arcs, these are more difficult to extingusih because of the continuous flow DC supply causes. Whilst AC goes back an forth giving downtime.
+### Solenoid
+-Solenoids consist of a Coil , Frame and Plunger
+Coil: Creates magnetic field when current is passed through.causes plunger to move
+Plunger: Usually a metal rod that can slide in and out of a coil. This si the moving part of the solenoid.
+Frame: Houses all the components. Often made of metal or plastic.
+
+
 ## 9. Example System Architecture
 
 ### Production Line IO Categories
