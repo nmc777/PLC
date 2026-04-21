@@ -603,6 +603,7 @@ Armature Reaction
 Distortion of magnetic fields when a current carrying wire is placed in a fixed magnetic field.Interpoles help reduce this effect.
 Commutator
 A ring made of insulated segments that keep armature windings in correct polarity to interact with main fields.
+
 Brush
 A brush is a sliding contact that rides against the commutator segment and connectes the armature to the external circuit.
 Brushes are used in pairs, one is + one is -. Each brush keeps same polarity at all times.
@@ -681,8 +682,47 @@ Current apart of generators own outputs
 Seperately excited
 Current or field windings supplied from na outside spurce
 
+What is the function of a commutator?
+The commutator keeps the armature windings in correct polarity to interact with the fields
 
+What two factors determine torque developed by a DC motor?
+The strength of magnetic field in the pole pieces
+The strength of magnetic field in armature
 
+What tyoe if motor is a constant speed motor?
+The shunt motor
+What is CEMF?
+A voltage induced in armature windings that opposes applied voltage
 
+Chapter 11
+
+Full Voltage Starting/Across the line starting/Line Voltage Starting
+Connects source votlage directly to load. Uses combination motor starter. Most common and preferred. Used for motor <1/3HP.
+
+Soft Starting
+With motors >25HP Softstarting is used. Similiar to slowly pressing your foot on a gas petal until its all the way to floor.
+Much less starting current.More gentle on the motor from a maintenance standpoint.
+
+High Starting Torque
+Used for heavy machinery
+
+High Run Efficiency
+Used for continuous duty machinery
+
+Manual Contactor
+A control device that uses pushbuttons to energize or de-energize the load connected
+They do not have overload protection
+Manual Starter
+A contact with a OLPD.
+Used in electrical motor circuits
+Magnetic Motor Starter
+An electrically operated switch that includes motor OLPD
+Include overload relays to detect excessive current
+
+Reduced-Voltage Starting
+Where a sysmte is not designed to tolerate the starting current of large motors, reduced-voltage starting is rquired
+These take longer cycle times which may affect duty cycle
+Primary Resistor Starting,Autotransformer starting, part-winding starting, wye-delta starting are all reduced voltage methods.
+Motors that are started at reduced voltage, mudt be switched to line voltage before they can reach full speed.
 *Document Version: 1.0*  
 *Last Updated: October 2025*
