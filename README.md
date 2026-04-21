@@ -564,5 +564,53 @@ Produces three part types:
 
 ---
 
+
+Chapter 10
+Field Windings
+Stationary windings used to produce magnetic field in an alternator or motor
+Armature
+Connected to field windings, rotates and produces shaft rotation
+Field Frame
+<img width="640" height="457" alt="image" src="https://github.com/user-attachments/assets/bd81842f-301c-4878-93ff-6447f2be2175" />
+
+
+The fixture/encasement in a DC motor
+Stator
+The fix/encasement in a AC motor
+Field Poles
+Metal peices mounted to the field frame that are used as field windings
+Interpoles
+Compensating Windings
+Commutating Field Poles
+Armature Reacting
+Commutator
+Brush
+Brush Holder![Uploading image.png…]()
+
+Pigtail
+Brush Rigging
+Radial Brushes
+Leading-Edge Brusehs
+Trailing-Edge Brushes
+Left Hand conductor Rule
+Right Hand motor ruleLeft Hand generator Rules
+Neutral Plane
+Brush Neutral
+Commutation
+DC Motor reversal
+Reversing DC Series Motor
+DC Compound Motor reversal
+Permanent Magnet DC motor reversal
+Series Motor
+Shunt Motor
+Compound Motor
+Cumulative Compound Motor
+Differential Compound Motor
+Permanent Magnet Motor
+DC Brushless motors
+Series-Wound Generator
+Shunt-Wound Generator
+
+
 *Document Version: 1.0*  
 *Last Updated: October 2025*
