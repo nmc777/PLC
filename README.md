@@ -564,8 +564,15 @@ Produces three part types:
 
 ---
 
-
+Great video explanation
+https://www.youtube.com/watch?v=OpL0joqJmqY&t=628s
 Chapter 10
+Magnetic fields in DC generators may be produced by electromagnets, or permanent magnets.
+Permanent magnets are used in small machines
+Electromagnets used in larger.
+The DC generator converts mechnical to electric.
+If we convert electric to mehcnical, we create a motor instead of a generator.
+
 Field Windings
 Stationary windings used to produce magnetic field in an alternator or motor
 Armature
@@ -579,24 +586,60 @@ Stator
 The fix/encasement in a AC motor
 Field Poles
 Metal peices mounted to the field frame that are used as field windings
+<img width="395" height="453" alt="image" src="https://github.com/user-attachments/assets/58cdfda2-0ff9-4a10-b6b1-b05bc549b50f" />
+
 Interpoles
+Auxillary pole placed between the main field poles of the motor
+Oppose Armature reaction
+Small magnets placed between poles of main field magnets
+<img width="367" height="267" alt="image" src="https://github.com/user-attachments/assets/f5a968f7-54f1-4ab5-91f1-e0cca6dd50e9" />
+
 Compensating Windings
+Additionaly to further counteract armature reaction, we use compensating windings
+Placed in the main pole face, the current in the windings is armature current flowing in opposite direction to armature conductors
+<img width="367" height="267" alt="image" src="https://github.com/user-attachments/assets/f5a968f7-54f1-4ab5-91f1-e0cca6dd50e9" />
 Commutating Field Poles
-Armature Reacting
+Armature Reaction
+Distortion of magnetic fields when a current carrying wire is placed in a fixed magnetic field.Interpoles help reduce this effect.
 Commutator
+A ring made of insulated segments that keep armature windings in correct polarity to interact with main fields.
 Brush
-Brush Holder![Uploading image.png…]()
+A brush is a sliding contact that rides against the commutator segment and connectes the armature to the external circuit.
+Brushes are used in pairs, one is + one is -. Each brush keeps same polarity at all times.
 
 Pigtail
+A prigtail is an extended, flexibile connection/braided copper conductor
 Brush Rigging
+The entire assembly of the brushes, brush holders, insulators and any wiring in the assembly.
 Radial Brushes
-Leading-Edge Brusehs
+-90 degrees.
+-Commonly used in Reversible DC motors
+<img width="161" height="168" alt="image" src="https://github.com/user-attachments/assets/fa4932c0-fa4b-4d2c-aa11-e39582042de2" />
+
+Leading-Edge Brushes
+-At an angle to the commutator
+-less restructed vertical motion
+<img width="155" height="165" alt="image" src="https://github.com/user-attachments/assets/6b9da4b0-4abc-4976-8b86-f644e1bc441f" />
+
 Trailing-Edge Brushes
+-Holds long side of brush tight against brush holder
+<img width="155" height="171" alt="image" src="https://github.com/user-attachments/assets/6e16b7f1-f567-4ee0-93a1-35a1590317c0" />
+
 Left Hand conductor Rule
-Right Hand motor ruleLeft Hand generator Rules
+Gives direction of magnetic field
+
+Right Hand motor rule
+Gives direction of armature motion
+
 Neutral Plane
+A line through the armature cross section ,perpindicular to the maximum amount of magnetic flux. 
+At neutral plane, the armature conducors are paralell to the magnetic flux, and no voltage is induced.
+Placing the brushes in a neutral plane reduce sparking between brushes and commutator
+Theoretically, no sparking should occur when brushes are in the netural plane
 Brush Neutral
+The position of the brushes where commutation can occur with minimal induced voltage on the armature coils
 Commutation
+The process where armature current is reveresed to keep motor torque in same direction during armature rotation.
 DC Motor reversal
 Reversing DC Series Motor
 DC Compound Motor reversal
@@ -608,8 +651,37 @@ Cumulative Compound Motor
 Differential Compound Motor
 Permanent Magnet Motor
 DC Brushless motors
+
 Series-Wound Generator
+Field coil is in series with the armature, poor voltage regulation. Additonal load cauises more current to flow through field coil. Increase field strength increaes voltage. Increases voltage cuases more current to flow. This stops when the coil is saturated.
+An increase in load increaes voltage.
+When load decreaes, voltage decreases.
+Voltage regulator in series wound is poor.
+<img width="868" height="537" alt="image" src="https://github.com/user-attachments/assets/fb7d2e92-9fba-4774-9be1-f1804f9041e4" />
+
 Shunt-Wound Generator
+When field weidling is connected in paralell armature and load, this is a shunt wound generator
+The field current is indepeendent of the load current, an increase in armature current wont cause increase in voltage ouput.
+Voltage regulation is improved
+Changing load causes small change in voltage output
+<img width="813" height="590" alt="image" src="https://github.com/user-attachments/assets/853480c0-92c5-438d-b3ba-b4bb8ce085d4" />
+
+Compound-Wound Generator
+Combines both features of series and shunt wound generator
+Magnetic fields oppose eachother, creating a series generator
+<img width="817" height="607" alt="image" src="https://github.com/user-attachments/assets/44f2071d-7f31-4aef-87f5-647684462df0" />
+
+Used where constant current is required such as arc welding.
+By making magnetic fields the same, the field windings aid one another creating good voltage regulation and current.
+<img width="923" height="688" alt="image" src="https://github.com/user-attachments/assets/2337e204-5a85-4b56-ba62-15ca81e48416" />
+
+
+Self-Excited
+Current apart of generators own outputs
+Seperately excited
+Current or field windings supplied from na outside spurce
+
+
 
 
 *Document Version: 1.0*  
